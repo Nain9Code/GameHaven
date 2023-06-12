@@ -1,0 +1,33 @@
+﻿<UserControl 
+    x:Class="GameHaven.UserControls.GameDetailsTabContent.Related"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+    xmlns:local="clr-namespace:GameHaven.UserControls.GameDetailsTabContent"
+    xmlns:uc="clr-namespace:GameHaven.UserControls"
+    mc:Ignorable="d" 
+    d:DesignHeight="450" 
+    d:DesignWidth="800"
+    Name="RelatedUserControl"
+    >
+    <StackPanel 
+            Orientation="Vertical"
+            VerticalAlignment="Top" 
+            HorizontalAlignment="Left"
+            Visibility="Visible"
+            Background="#2E2E2E"
+            Width="{Binding ElementName=RelatedUserControl, Path=ActualWidth}"
+    >
+        <Label FontSize="25" Foreground="White" Margin="0,0,0,30">People also like</Label>
+        <uc:GamesViewer x:Name="AppsViewer1" ></uc:GamesViewer>
+        <Label FontSize="25" Foreground="White" Margin="0,40,0,30">Top free games</Label>
+        <uc:GamesViewer x:Name="AppsViewer2" ></uc:GamesViewer>
+        <Label FontSize="25" Foreground="White" Margin="0,40,0,30">Top paid games</Label>
+        <uc:GamesViewer x:Name="AppsViewer3" ></uc:GamesViewer>
+        <Label FontSize="25" Foreground="White" Margin="0,40,0,30">Best rated games</Label>
+        <uc:GamesViewer x:Name="AppsViewer4" ></uc:GamesViewer>
+        <Label FontSize="25" Foreground="White" Margin="0,40,0,30">Best selling games</Label>
+        <uc:GamesViewer x:Name="AppsViewer5" ></uc:GamesViewer>
+    </StackPanel>
+</UserControl>

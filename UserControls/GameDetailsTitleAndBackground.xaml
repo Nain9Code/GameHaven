@@ -1,0 +1,93 @@
+﻿<UserControl 
+    x:Class="GameHaven.UserControls.GameDetailsTitleAndBackground"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+    xmlns:local="clr-namespace:GameHaven.UserControls"
+    mc:Ignorable="d" 
+    d:DesignHeight="500" 
+    d:DesignWidth="1200"
+    Name="GameDetailsTitleAndBackgroundUserControl"
+    >
+    <Grid Name="AppViewAndBackgroundGrid"
+          Height="580"
+    >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.50*"></RowDefinition>
+            <RowDefinition Height="0.50*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="50"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="50"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Image Name="BackgroundImage"
+               Grid.Row="0" 
+               Grid.Column="0"
+               Grid.RowSpan="2"
+               Grid.ColumnSpan="3"
+               Source="/Images/GameDetailIcons/fieldbackground.png" 
+               HorizontalAlignment="Stretch"
+               VerticalAlignment="Stretch"
+               Stretch="Fill"
+        />
+        <Button Name="BackButton"
+                Grid.Column="0"
+                Width="35"
+                Height="35"
+                Content="&lt;"
+                Click="Back_Btn"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+        />
+        <Grid Name="AppWideView"  
+              Grid.Row="1" 
+              Grid.Column="1"
+              Background="#2e2e2e"
+              Margin="15"
+        >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.18*"></ColumnDefinition>
+                <ColumnDefinition Width="0.60*"></ColumnDefinition>
+                <ColumnDefinition Width="0.22*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Image Name="GameImage"
+                   Grid.Row="0"
+                   Grid.Column="0"
+                   Source="/Images/GameDetailIcons/01-deppart.png"
+                   VerticalAlignment="Center"
+                   Stretch="Uniform"
+                   Margin="10"
+            />
+            <StackPanel Name="MiddleStackPanel" 
+                        Grid.Row="0"
+                        Grid.Column="1"
+                        Margin="10,0,10,0" 
+                        Orientation="Vertical"
+                        VerticalAlignment="Top"
+            >
+                <Label Name="AppNameLabel"  FontSize="25" Foreground="White">Tea App</Label>
+                <StackPanel Orientation="Horizontal">
+                    <Label FontSize="12" Foreground="#009cfa">Adventure</Label>
+                    <Label FontSize="12" Foreground="#009cfa">Horror</Label>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Label FontSize="12" Foreground="#009cfa">RPG</Label>
+                    <Label FontSize="12" Foreground="#009cfa">Single-Player</Label>
+                </StackPanel>
+                <TextBlock  Margin="6,6,0,0" FontSize="12" Foreground="White" TextWrapping="WrapWithOverflow"  MaxHeight="150">
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                    
+                </TextBlock>
+            </StackPanel>
+            <StackPanel Name="RightStackPanel" 
+                        Grid.Row="0" Grid.Column="2" 
+                        Margin="15"
+            >
+                <Label FontSize="18" Foreground="Gray">Free+</Label>
+                <Button Background="#009cfa" Foreground="White">Get</Button>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</UserControl>

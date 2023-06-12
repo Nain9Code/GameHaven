@@ -1,0 +1,21 @@
+﻿<Page x:Class="GameHaven.Views.Login"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      mc:Ignorable="d"
+      Title="Login">
+
+    <Grid Background="#282828">
+        <StackPanel Width="300" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Image Source="pack://application:,,,/GAMEHAVENLOGO.png" Height="300" Width="300" Margin="0,0,0,0"/>
+            <Label Content="Login" FontSize="22" Foreground="White" HorizontalContentAlignment="Center" Margin="0,0,0,5"/>
+            <Label Content="Username" FontSize="16" Foreground="White" Padding="5"/>
+            <TextBox Name="UsernameTextBox" Margin="0,0,0,5" Padding="5" FontSize="14"/>
+            <Label Content="Password" FontSize="16" Foreground="White" Padding="5"/>
+            <PasswordBox Name="PasswordTextBox" Margin="0,0,0,10" Padding="5" FontSize="14"/>
+            <Button Content="Login" Background="white" Foreground="Black" Padding="10,5" Margin="0,0,0,10" Click="Login_Click" FontSize="14"/>
+            <Button Content="Go Home" Background="White" Foreground="Black" Padding="10,5" Click="GoHome_Click" FontSize="14"/>
+        </StackPanel>
+    </Grid>
+</Page>
